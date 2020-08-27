@@ -193,8 +193,9 @@ if (gameState === ONBRICKS){
   enemyGroup.setVelocityXEach(0);
   enemy2Group.setVelocityXEach(0);
   enemy3Group.setVelocityXEach(0);
-  
-  if (keyDown("space")){
+
+  if((touches.length > 0 || keyDown("space") && mario.y>= 536)) {
+    touches = [];
 mario.velocityX = 2;
 mario.velocityY = 2;
 mario.changeAnimation("running",marioimg);
